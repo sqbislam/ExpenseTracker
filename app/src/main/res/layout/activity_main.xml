@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    android:orientation="vertical"
+    tools:context="com.example.android.expensetracker.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/Total"
+            android:layout_width="0dp"
+            android:layout_height="96dp"
+            android:layout_margin="16dp"
+            android:layout_weight="100"
+            android:background="@android:color/white"
+            android:textAlignment="textEnd"
+            android:textSize="52dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ToggleButton
+                android:id="@+id/Plus"
+                android:layout_width="36dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/toggleselector"
+                android:textOff="ADD"
+                android:textOn="ADD"
+                android:textSize="12dp" />
+
+            <ToggleButton
+                android:id="@+id/Minus"
+                android:layout_width="36dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/toggleselector"
+                android:text="+"
+                android:textOff="SUB"
+                android:textOn="SUB"
+                android:textSize="12dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/ten"
+            android:layout_width="0dp"
+            android:layout_height="96dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/buttonselector"
+            android:text="10" />
+
+        <Button
+            android:id="@+id/twenty"
+            android:layout_width="0dp"
+            android:layout_height="96dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/buttonselector"
+            android:text="20" />
+
+        <Button
+            android:id="@+id/fifty"
+            android:layout_width="0dp"
+            android:layout_height="96dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/buttonselector"
+            android:text="50" />
+
+        <Button
+            android:id="@+id/hundred"
+            android:layout_width="0dp"
+            android:layout_height="96dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/buttonselector"
+            android:text="100" />
+
+        <Button
+            android:id="@+id/fivehundred"
+            android:layout_width="0dp"
+            android:layout_height="96dp"
+            android:layout_weight="1"
+            android:background="@drawable/buttonselector"
+            android:text="500" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/Days"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Day"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="@color/icons"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/dayUp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Days"
+                android:background="@drawable/buttonselector"
+                android:text="+" />
+
+            <TextView
+                android:id="@+id/dayview"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:layout_below="@id/dayUp"
+                android:background="@android:color/white"
+                android:textAlignment="center"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/dayDown"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/dayview"
+                android:background="@drawable/buttonselector"
+                android:text="-" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:layout_weight="5">
+
+            <TextView
+                android:id="@+id/unitTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:text="Unit"
+                android:textAllCaps="true"
+                android:textColor="@color/icons"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/unitUp"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/unitTextView"
+                android:layout_marginBottom="1dp"
+                android:background="@drawable/buttonselector"
+                android:text="+" />
+
+            <Button
+                android:id="@+id/unitDown"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/unitUp"
+                android:background="@drawable/buttonselector"
+                android:text="-"
+
+                />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/saveChanges"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/buttonselector"
+            android:text="Save Changes to Today" />
+
+        <Button
+            android:id="@+id/History"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/saveChanges"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/buttonselector"
+            android:text="History" />
+
+        <Button
+            android:id="@+id/monthadd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/saveChanges"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/buttonselector"
+            android:text="add"
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="© Saqib_Islam"
+            android:textSize="10sp"
+            android:textColor="@color/colorPrimaryText"
+            android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+
+</LinearLayout>
